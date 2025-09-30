@@ -1,0 +1,236 @@
+$font-base: 'Arial', sans-serif;
+$bg-color: rgba(0, 0, 0, 0.7);
+$bg-color--gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+$btn-color: #3a853e;
+$btn-color--hover: #4caf50;
+$btn-color--unwork: #606060;
+$btn-color--cancel: #c81616;
+$btn-color--cancelHover: #ff1919;
+$text-color: white;
+
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+html {
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: $bg-color--gradient;
+    font-family: $font-base;
+    button {
+      background: $btn-color;
+      color: $text-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+      }
+      @media (max-width: $breakpoint-sm) {
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+      &:hover {
+        background: $btn-color--hover;
+      }
+      &.unwork {
+        background: $btn-color--unwork;
+        opacity: 50%;
+        pointer-events: none;
+      }
+    }
+    #hud {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 8px;
+      z-index: 100;
+      font-size: 24px;
+      color: $text-color;
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+      }
+      @media (max-width: $breakpoint-sm) {
+        top: 10px;
+        left: 10px;
+        font-size: 16px;
+      }
+      #round {
+        background: $bg-color;
+        padding: 15px;
+        border-radius: 10px;
+        #gameStatus {
+          font-size: 16px;
+          @media (max-width: $breakpoint-sm) {
+            font-size: 12px;
+          }
+        }
+      }
+      #preview {
+        width: fit-content;
+        color: $text-color;
+        background: $bg-color;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        @media (max-width: $breakpoint-sm) {
+          font-size: 12px;
+        }
+      }
+    }
+    #customize {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      color: $text-color;
+      @media (max-width: $breakpoint-sm) {
+        top: 10px;
+        right: 10px;
+        gap: 16px;
+      }
+    }
+    #setting {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 200;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: $text-color;
+      button {
+        background-color: $btn-color--unwork;
+        pointer-events: none;
+      }
+      .mask {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+      }
+      .setting {
+        &__content {
+          position: relative;
+          z-index: 300;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;
+        }
+        &__row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+        &__select {
+          width: 32px;
+          height: auto;
+          aspect-ratio: 1;
+          opacity: 50%;
+          @media (max-width: $breakpoint-sm) {
+            width: 24px;
+          }
+          &:hover {
+            cursor: pointer;
+            opacity: 100%;
+          }
+        }
+      }
+      #okBtn {
+        background: $btn-color;
+        pointer-events: auto;
+        &:hover {
+          background: $btn-color--hover;
+        }
+      }
+      #cancelBtn {
+        background: $btn-color--cancel;
+        pointer-events: auto;
+        &:hover {
+          background: $btn-color--cancelHover;
+        }
+      }
+    }
+    #resetBtn,
+    #lockViewBtn {
+      width: 36px;
+      height: auto;
+      aspect-ratio: 1;
+      opacity: 50%;
+      @media (max-width: $breakpoint-sm) {
+        width: 24px;
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 100%;
+      }
+    }
+    #lockViewIcon {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+    }
+    #controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      z-index: 100;
+      @media (max-width: $breakpoint-sm) {
+        gap: 4px;
+      }
+    }
+    #instructions {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: $text-color;
+      background: $bg-color;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      max-width: 300px;
+      @media (max-width: $breakpoint-sm) {
+        bottom: 10px;
+        left: 10px;
+        font-size: 12px;
+      }
+    }
+    #check {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      @media (max-width: $breakpoint-sm) {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+}

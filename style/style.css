@@ -1,0 +1,246 @@
+html body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: "Arial", sans-serif;
+}
+html body button {
+  background: #3a853e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+@media (max-width: 768px) {
+  html body button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  html body button {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+}
+html body button:hover {
+  background: #4caf50;
+}
+html body button.unwork {
+  background: #606060;
+  opacity: 50%;
+  pointer-events: none;
+}
+html body #hud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  z-index: 100;
+  font-size: 24px;
+  color: white;
+}
+@media (max-width: 768px) {
+  html body #hud {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  html body #hud {
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+  }
+}
+html body #hud #round {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+html body #hud #round #gameStatus {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  html body #hud #round #gameStatus {
+    font-size: 12px;
+  }
+}
+html body #hud #preview {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  html body #hud #preview {
+    font-size: 12px;
+  }
+}
+html body #customize {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+}
+@media (max-width: 576px) {
+  html body #customize {
+    top: 10px;
+    right: 10px;
+    gap: 16px;
+  }
+}
+html body #setting {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+html body #setting button {
+  background-color: #606060;
+  pointer-events: none;
+}
+html body #setting .mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+html body #setting .setting__content {
+  position: relative;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+html body #setting .setting__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+html body #setting .setting__select {
+  width: 32px;
+  height: auto;
+  aspect-ratio: 1;
+  opacity: 50%;
+}
+@media (max-width: 576px) {
+  html body #setting .setting__select {
+    width: 24px;
+  }
+}
+html body #setting .setting__select:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+html body #setting #okBtn {
+  background: #3a853e;
+  pointer-events: auto;
+}
+html body #setting #okBtn:hover {
+  background: #4caf50;
+}
+html body #setting #cancelBtn {
+  background: #c81616;
+  pointer-events: auto;
+}
+html body #setting #cancelBtn:hover {
+  background: #ff1919;
+}
+html body #resetBtn,
+html body #lockViewBtn {
+  width: 36px;
+  height: auto;
+  aspect-ratio: 1;
+  opacity: 50%;
+}
+@media (max-width: 576px) {
+  html body #resetBtn,
+  html body #lockViewBtn {
+    width: 24px;
+  }
+}
+html body #resetBtn:hover,
+html body #lockViewBtn:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+html body #lockViewIcon {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+html body #controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 100;
+}
+@media (max-width: 576px) {
+  html body #controls {
+    gap: 4px;
+  }
+}
+html body #instructions {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  max-width: 300px;
+}
+@media (max-width: 576px) {
+  html body #instructions {
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+  }
+}
+html body #check {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  html body #check {
+    bottom: 10px;
+    right: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

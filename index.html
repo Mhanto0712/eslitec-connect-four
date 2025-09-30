@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D 四指棋 (重力版)</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="round">
+        <div id="currentPlayer">玩家1 (白方) 的回合</div>
+        <div id="gameStatus">將滑鼠移到底面網格或棋子上預覽位置</div>
+      </div>
+      <div id="preview">
+        <div id="previewInfo">預覽位置: 無</div>
+      </div>
+    </div>
+
+    <div id="customize">
+      <i id="resetBtn" data-lucide="settings"></i>
+      <div id="lockViewBtn">
+        <i id="lockViewIcon" data-lucide="lock-keyhole-open"></i>
+      </div>
+    </div>
+
+    <div id="setting">
+      <div class="mask"></div>
+      <div class="setting__content">
+        <div class="setting__row">
+          <i id="whoseLeft" class="setting__select" data-lucide="step-back"></i>
+          <button id="whoseBtn" disabled>與玩家對戰</button>
+          <i
+            id="whoseRight"
+            class="setting__select"
+            data-lucide="step-forward"
+          ></i>
+        </div>
+        <div class="setting__row">
+          <i id="gridLeft" class="setting__select" data-lucide="step-back"></i>
+          <button id="gridBtn" disabled>4 x 4</button>
+          <i
+            id="gridRight"
+            class="setting__select"
+            data-lucide="step-forward"
+          ></i>
+        </div>
+        <div class="setting__row">
+          <i id="modeLeft" class="setting__select" data-lucide="step-back"></i>
+          <button id="modeBtn" disabled>簡單模式</button>
+          <i
+            id="modeRight"
+            class="setting__select"
+            data-lucide="step-forward"
+          ></i>
+        </div>
+        <div class="setting__row">
+          <button id="cancelBtn">取消</button>
+          <button id="okBtn">確認</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="instructions">
+      <strong>遊戲規則:</strong><br />
+      • 4x4 底面，最高4層<br />
+      • 棋子會掉落到最低可用位置<br />
+      • 連成4子獲勝（任何方向）<br />
+      • 點擊底面網格或棋子本身來投放棋子<br />
+      • 滑鼠拖拽旋轉視角
+    </div>
+
+    <div id="check">
+      <div id="controls">
+        <button id="controlsBtn">切換視角</button>
+      </div>
+      <button id="confirmBtn" class="unwork" disabled>確認落子</button>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
