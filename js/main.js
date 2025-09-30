@@ -435,6 +435,10 @@ function lockViewEvent() {
     } else {
       controls.enabled = true;
 
+      currentIcon.remove();
+      LOCKVIEW_BTN.innerHTML =
+        '<i id="lockViewIcon" data-lucide="lock-keyhole-open"></i>';
+
       CONTROLS_BTN.classList.remove('unwork');
       CONTROLS_BTN.style.pointerEvents = 'auto';
     }
