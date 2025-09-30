@@ -9,7 +9,6 @@ Vanilla JS
 - 棋子顏色改為黑白
 - 棋子下落不超過底部
 - 新增 4 x 4、6 x 6、8 x 8 的模式
-- 送出新訊息
 
 ## 進階優化
 
@@ -31,4 +30,4 @@ Vanilla JS
 
 ## 影片
 
-<!-- [![eslitec-line-oa](./eslitec-line-oa.png)](https://drive.google.com/file/d/1UP0_OeeeJhnvVffxeP28A7uDVzYJ-nNF/view?usp=drive_link) -->
+[![eslitec-line-oa](./eslitec-connect-four.png)](https://drive.google.com/file/d/1SRwJGEsYkafv-Vo9lkjV36EL0fviWJiR/view?usp=drive_link)
