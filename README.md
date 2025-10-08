@@ -30,4 +30,4 @@ Vanilla JS
 
 ## 影片
 
-[![eslitec-line-oa](./eslitec-connect-four.png)](https://drive.google.com/file/d/1SRwJGEsYkafv-Vo9lkjV36EL0fviWJiR/view?usp=drive_link)
+[![eslitec-line-oa](./eslitec-connect-four.png)](https://drive.google.com/file/d/1PIWWrF0PvM0mxr0Nb2QjEkjm0_0W9D-j/view?usp=drive_link)
